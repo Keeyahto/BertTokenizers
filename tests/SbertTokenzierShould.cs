@@ -21,7 +21,7 @@ namespace BERTTokenizersTests
             var tokens = _tokenizer.Tokenize(sentence);
             Assert.Equal(5, tokens.Count);
             Assert.Equal(("[CLS]", 101, 0), tokens[0]);
-            Assert.Equal(("Я", 119, 0), tokens[1]);
+            Assert.Equal(("я", 119, 0), tokens[1]);
             Assert.Equal(("тебя", 1679, 0), tokens[2]);
             Assert.Equal(("люблю", 7355, 0), tokens[3]);
             Assert.Equal(("[SEP]", 102, 0), tokens[4]);
@@ -33,7 +33,7 @@ namespace BERTTokenizersTests
         {
             var sentence = "Я тебя люблю";
 
-            var encoded = _tokenizer.Encode(6, sentence);
+            var encoded = _tokenizer.Encode(5, sentence);
             Assert.Equal(5, encoded.Count);
             Assert.Equal((101, 0, 1), encoded[0]);
             Assert.Equal((119, 0, 1), encoded[1]);

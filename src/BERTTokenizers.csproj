@@ -31,6 +31,8 @@
     <None Remove="Vocabularies\base_cased_multilingual.txt" />
     <None Remove="Vocabularies\base_uncased.txt" />
     <None Remove="Vocabularies\base_uncased_large.txt" />
+	<None Remove="Vocabularies\sbert.txt" />
+
   </ItemGroup>
 
   <ItemGroup>
@@ -64,6 +66,11 @@
       <CopyToPublishDirectory>Always</CopyToPublishDirectory>
       <PackageCopyToOutput>true</PackageCopyToOutput>
     </Content>
+	<Content Include="Vocabularies\sbert.txt">
+		<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		<CopyToPublishDirectory>Always</CopyToPublishDirectory>
+		<PackageCopyToOutput>true</PackageCopyToOutput>
+	</Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -79,5 +86,6 @@
   
   <ItemGroup>
     <Folder Include="Assets\" />
+    <Folder Include="Properties\" />
   </ItemGroup>
 </Project>
