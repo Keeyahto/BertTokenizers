@@ -22,6 +22,7 @@
     <PackageReleaseNotes>Open-source project for BERT tokenizers that can be used in C#.</PackageReleaseNotes>
     <PackageTags>BERT, Tokenizer, charp, dotnet</PackageTags>
     <Version>1.2.0</Version>
+    <Platforms>AnyCPU;x86;x64</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
@@ -67,7 +68,7 @@
       <PackageCopyToOutput>true</PackageCopyToOutput>
     </Content>
 	<Content Include="Vocabularies\sbert.txt">
-		<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		<CopyToPublishDirectory>Always</CopyToPublishDirectory>
 		<PackageCopyToOutput>true</PackageCopyToOutput>
 	</Content>
