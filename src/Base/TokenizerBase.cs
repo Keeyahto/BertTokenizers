@@ -20,7 +20,7 @@ namespace BERTTokenizers.Base
                 _vocabularyDict[_vocabulary[i]] = i;
         }
 
-        
+
         public List<(long InputIds, long TokenTypeIds, long AttentionMask)> Encode(int sequenceLength, params string[] texts)
         {
             var tokens = Tokenize(texts);
@@ -34,7 +34,7 @@ namespace BERTTokenizers.Base
             var output = tokenIndexes.Zip(segmentIndexes, Tuple.Create)
                 .Zip(inputMask, (t, z) => Tuple.Create(t.Item1, t.Item2, z));
 
-            return output.Select(x => (InputIds: x.Item1, TokenTypeIds: x.Item2, AttentionMask:x.Item3)).ToList();
+            return output.Select(x => (InputIds: x.Item1, TokenTypeIds: x.Item2, AttentionMask: x.Item3)).ToList();
         }
 
         public string IdToToken(int id)
