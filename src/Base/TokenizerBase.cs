@@ -11,7 +11,7 @@ public abstract class TokenizerBase
     protected readonly List<string> _vocabulary;
     protected readonly Dictionary<string, int> _vocabularyDict;
 
-    public TokenizerBase(string vocabularyFilePath)
+    protected TokenizerBase(string vocabularyFilePath)
     {
         _vocabulary = VocabularyReader.ReadFile(vocabularyFilePath);
 
