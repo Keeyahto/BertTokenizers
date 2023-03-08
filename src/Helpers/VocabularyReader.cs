@@ -1,28 +1,23 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 
-namespace BERTTokenizers.Helpers
+namespace BERTTokenizers.Helpers;
+
+public class VocabularyReader
 {
-    public class VocabularyReader
+    public static List<string> ReadFile(string filename)
     {
-        public static List<string> ReadFile(string filename)
+        var result = new List<string>();
+
+        using (var reader = new StreamReader(filename))
         {
-            var result = new List<string>();
+            string line;
 
-            using (var reader = new StreamReader(filename))
-            {
-                string line;
-
-                while ((line = reader.ReadLine()) != null)
-                {
-                    if (!string.IsNullOrWhiteSpace(line))
-                    {
-                        result.Add(line);
-                    }
-                }
-            }
-
-            return result;
+            while ((line = reader.ReadLine()) != null)
+                if (!string.IsNullOrWhiteSpace(line))
+                    result.Add(line);
         }
+
+        return result;
     }
 }

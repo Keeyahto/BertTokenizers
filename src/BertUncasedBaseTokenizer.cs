@@ -1,11 +1,10 @@
 ﻿using BERTTokenizers.Base;
 
-namespace BERTTokenizers
+namespace BERTTokenizers;
+
+public class BertUncasedBaseTokenizer : UncasedTokenizer
 {
-    public class BertUncasedBaseTokenizer : UncasedTokenizer
+    public BertUncasedBaseTokenizer() : base("./Vocabularies/base_uncased.txt")
     {
-        public BertUncasedBaseTokenizer() : base("./Vocabularies/base_uncased.txt")
-        {
-        }
     }
 }

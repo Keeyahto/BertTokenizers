@@ -1,14 +1,11 @@
 ﻿using BERTTokenizers.Base;
 
-namespace BERTTokenizers
+namespace BERTTokenizers;
+
+public class SbertLargeTokenizer
+    : UncasedTokenizer
 {
-    public class SbertLargeTokenizer
-        : UncasedTokenizer
+    public SbertLargeTokenizer() : base("./Vocabularies/sbert.txt")
     {
-        public SbertLargeTokenizer() : base("./Vocabularies/sbert.txt")
-        {
-        }
     }
-
-
 }

@@ -1,11 +1,10 @@
 ﻿using BERTTokenizers.Base;
 
-namespace BERTTokenizers
+namespace BERTTokenizers;
+
+public class BertUnasedCustomVocabulary : CasedTokenizer
 {
-    public class BertUnasedCustomVocabulary : CasedTokenizer
+    public BertUnasedCustomVocabulary(string vocabularyFilePath) : base(vocabularyFilePath)
     {
-        public BertUnasedCustomVocabulary(string vocabularyFilePath) : base(vocabularyFilePath) { }
-
     }
-
 }
