@@ -1,8 +1,8 @@
-﻿using System;
+﻿using BERTTokenizers.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using BERTTokenizers.Helpers;
 
 namespace BERTTokenizers.Base;
 

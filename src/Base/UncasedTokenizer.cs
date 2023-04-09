@@ -1,7 +1,7 @@
-﻿using System;
+﻿using BERTTokenizers.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using BERTTokenizers.Extensions;
 
 namespace BERTTokenizers.Base;
 
